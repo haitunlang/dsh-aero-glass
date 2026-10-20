@@ -102,9 +102,10 @@ or you can build the patch from your own installation.
 - [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt)
 
 The prebuilt asar bundles the upstream DSH 0.2.1-rc.2 application with the
-patch applied. It is **not** MIT-licensed; DSH remains under its own license.
-Only use it with a licensed DSH installation, and delete it when you no longer
-need it.
+patch applied; `main.patched.js` is the patched upstream main-process file.
+Both contain DSH code and are **not** MIT-licensed; DSH remains under its own
+license. Only use them with a licensed DSH installation, and delete them when
+no longer needed.
 
 1. Close DSH completely.
 2. Back up `resources/app.asar`.

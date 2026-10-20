@@ -47,8 +47,10 @@ attaches a prebuilt `app.asar.patched` for **DSH 0.2.1-rc.2 only**:
 - [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt)
 
 The asset bundles the upstream DSH 0.2.1-rc.2 application with the patch
-applied. It is **not** MIT-licensed; DSH remains under its own license. Use it
-only with a licensed DSH installation and delete it when no longer needed.
+applied; `main.patched.js` is the patched upstream main-process file. Both
+contain DSH code and are **not** MIT-licensed; DSH remains under its own
+license. Use them only with a licensed DSH installation and delete them when
+no longer needed.
 
 If your DSH version differs, build from your own installation with the scripts
 below.
