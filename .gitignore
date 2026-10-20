@@ -1,0 +1,19 @@
+# Native patch build outputs (never commit these)
+aero/app.asar.patched
+aero/main.orig.js
+aero/main.patched.js
+aero-backup/
+
+# Extracted DSH source / local test lab
+research/
+acrylic-lab/
+
+# Dependencies and local tooling
+node_modules/
+tools/gh/
+tools/gh.zip
+*.log
+
+# OS / editor
+Thumbs.db
+.DS_Store
