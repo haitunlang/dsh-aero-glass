@@ -32,7 +32,7 @@ windows actually visible through the glass.
 2. Open the **Discover** tab, choose **Add index source**, and enter:
 
    ```text
-   https://raw.githubusercontent.com/haitunlang/dsh-aero-glass/main/market/index.json
+   https://cdn.jsdelivr.net/gh/haitunlang/dsh-aero-glass@main/market/index.json
    ```
 
 3. Find **Aero Glass Skin**, open it, and install a compatible version.
