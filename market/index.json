@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "title": { "en": "DSH Aero Glass", "zh": "DSH Aero 玻璃" },
+  "plugins": [
+    {
+      "name": "dsh-aero-skin",
+      "title": { "en": "Aero Glass Skin", "zh": "Aero 玻璃皮肤" },
+      "description": {
+        "en": "Windows 7 Aero-inspired glass skin for the DSH Web UI; optional Windows 10 native blur patch in the repository.",
+        "zh": "为 DSH Web UI 提供 Windows 7 Aero 风格玻璃皮肤；仓库内附可选的 Windows 10 原生模糊补丁。"
+      },
+      "icon": "icons/dsh-aero-skin.svg",
+      "author": "haitunlang",
+      "homepage": "https://github.com/haitunlang/dsh-aero-glass#readme",
+      "repository": { "url": "https://github.com/haitunlang/dsh-aero-glass", "directory": "dsh-aero-skin" },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1792507137,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/haitunlang/dsh-aero-glass",
+            "commit": "22270720dd7cce182ebf21f879de7eb2eb290dce",
+            "path": "dsh-aero-skin"
+          }
+        }
+      ]
+    }
+  ]
+}
