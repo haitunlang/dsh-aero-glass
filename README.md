@@ -53,6 +53,10 @@ After installing, reload the page or restart DSH. The **Aero** pill appears
 in the titlebar and a **Aero glass effect** row appears under Settings →
 General. Both share the `dsh-aero:enabled` localStorage key.
 
+> If you already have a local development copy of this skin enabled, disable
+> it before installing the market version; two copies would apply the same
+> layers twice.
+
 ---
 
 ## What the skin changes
