@@ -1,5 +1,7 @@
 # Native Windows 10 blur patch (optional)
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 This folder is the **optional native half** of DSH Aero Glass. It is not
 required for the page skin and is not installable from the plugin market.
 
@@ -33,6 +35,24 @@ DSH.
 `main.orig.js`, `main.patched.js`, `app.asar.patched` and the DSH source are
 **not** committed to this repository.
 
+## Prebuilt asset
+
+Release [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0)
+attaches a prebuilt `app.asar.patched` for **DSH 0.2.1-rc.2 only**:
+
+- [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)
+  — 182,798,359 bytes, SHA256 `5ACA0F97BAB4560DDC6CEBCDDC0E89950931273FB9BD89F9720B2E0E039EFB5C`
+- [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)
+  — 520,410 bytes, SHA256 `7EDC71A8D602BC6CA870CD49E6A29CFBA6C9669AB726E6437F134CC7B155750E`
+- [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt)
+
+The asset bundles the upstream DSH 0.2.1-rc.2 application with the patch
+applied. It is **not** MIT-licensed; DSH remains under its own license. Use it
+only with a licensed DSH installation and delete it when no longer needed.
+
+If your DSH version differs, build from your own installation with the scripts
+below.
+
 ## Paths
 
 `extract-main.js` and `repack.js` use:
@@ -58,7 +78,7 @@ node verify-asar.js
 
 1. Close DSH completely.
 2. Back up `resources/app.asar` (for example to `app.asar.orig`).
-3. Copy `aero/app.asar.patched` to `resources/app.asar`.
+3. Copy the downloaded or built `app.asar.patched` to `resources/app.asar`.
 4. Start DSH from its install directory.
 
 To undo, close DSH and copy the backup back over `resources/app.asar`.

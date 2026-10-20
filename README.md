@@ -1,5 +1,7 @@
 # DSH Aero Glass
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A Windows 7 Aero-inspired glass skin for the **DSH Desktop** Web UI, plus an
 optional Windows 10 native blur patch that makes the window show the real
 desktop behind it.
@@ -87,8 +89,31 @@ The selector-based details are intentionally best-effort.
 > Advanced and version-specific. Read [`aero/README.md`](aero/README.md)
 > before touching `resources/app.asar`.
 
-The native patch is built from **your own** DSH installation; this repository
-does **not** ship a patched asar or DSH's `main.js`.
+The repository does not commit the 182 MB patched asar to git. Prebuilt assets
+are attached to the [v1.0.0 release](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0),
+or you can build the patch from your own installation.
+
+### Option A: prebuilt asset (DSH 0.2.1-rc.2 only)
+
+- [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)
+  — 182,798,359 bytes, SHA256 `5ACA0F97BAB4560DDC6CEBCDDC0E89950931273FB9BD89F9720B2E0E039EFB5C`
+- [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)
+  — 520,410 bytes, SHA256 `7EDC71A8D602BC6CA870CD49E6A29CFBA6C9669AB726E6437F134CC7B155750E`
+- [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt)
+
+The prebuilt asar bundles the upstream DSH 0.2.1-rc.2 application with the
+patch applied. It is **not** MIT-licensed; DSH remains under its own license.
+Only use it with a licensed DSH installation, and delete it when you no longer
+need it.
+
+1. Close DSH completely.
+2. Back up `resources/app.asar`.
+3. Copy the downloaded `app.asar.patched` over `resources/app.asar`.
+4. Start DSH from its install directory.
+
+To undo, restore the backup asar.
+
+### Option B: build from your own install
 
 1. Back up `resources/app.asar`.
 2. Set `DSH_ROOT` to your DSH install directory (default `D:\DSH`).
@@ -109,8 +134,7 @@ anchors changed. The window uses DWM **BlurBehind** (state 3) rather than
 Acrylic because Acrylic doubled the measured drag cost; the taskbar uses
 Acrylic (state 4), re-applied every five seconds.
 
-To undo, restore the backup asar. Windows 10 only; DSH updates overwrite the
-patched asar.
+Windows 10 only; DSH updates overwrite the patched asar.
 
 ---
 
@@ -118,9 +142,10 @@ patched asar.
 
 ```text
 dsh-aero-skin/        page skin bundle (market package)
-aero/                 optional native patch scripts + README
+aero/                 optional native patch scripts + READMEs
 tools/                screenshot / DWM helpers (development)
 shots/                README screenshots
+README.zh-CN.md       Chinese README
 LICENSE               MIT
 ```
 
