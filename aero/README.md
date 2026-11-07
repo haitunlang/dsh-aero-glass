@@ -17,7 +17,7 @@ DSH.
 ## Requirements
 
 - Windows 10 (tested on 22H2 / build 19045)
-- DSH Desktop **0.2.1-rc.2** / Electron 44.7.0
+- DSH Desktop **0.2.1-rc.2** or **0.2.2-rc.1** / Electron 44.7.0
 - Node.js available on `PATH`
 - `resources/app.asar` with the asar-integrity fuse disabled
   (`EnableEmbeddedAsarIntegrityValidation: Disabled`), otherwise the app will
@@ -37,20 +37,19 @@ DSH.
 
 ## Prebuilt asset
 
-Release [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0)
-attaches a prebuilt `app.asar.patched` for **DSH 0.2.1-rc.2 only**:
+Prebuilt assets are attached to the matching release:
 
-- [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)
-  — 182,798,359 bytes, SHA256 `5ACA0F97BAB4560DDC6CEBCDDC0E89950931273FB9BD89F9720B2E0E039EFB5C`
-- [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)
-  — 520,410 bytes, SHA256 `7EDC71A8D602BC6CA870CD49E6A29CFBA6C9669AB726E6437F134CC7B155750E`
-- [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt)
+| DSH | Release | Assets |
+| --- | --- | --- |
+| 0.2.1-rc.2 | [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched) — 182,798,359 bytes, `5ACA0F97…`; [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js) — 520,410 bytes, `7EDC71A8…`; [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt) |
+| 0.2.2-rc.1 | [v1.1.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.1.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/app.asar.patched) — 213,206,408 bytes, `D5FF954C…`; [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/main.patched.js) — 842,214 bytes, `D2A2408A…`; [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/SHA256SUMS.txt) |
 
-The asset bundles the upstream DSH 0.2.1-rc.2 application with the patch
-applied; `main.patched.js` is the patched upstream main-process file. Both
-contain DSH code and are **not** MIT-licensed; DSH remains under its own
-license. Use them only with a licensed DSH installation and delete them when
-no longer needed.
+Full hashes are in each release's `SHA256SUMS.txt`. The assets bundle the
+upstream DSH application with the patch applied; `main.patched.js` is the
+patched upstream main-process file. They contain DSH code and are **not**
+MIT-licensed; DSH remains under its own license. Use them only with a licensed
+DSH installation, the matching DSH version, and delete them when no longer
+needed.
 
 If your DSH version differs, build from your own installation with the scripts
 below.
@@ -121,6 +120,6 @@ afford Acrylic because it is not dragged.
   or reset the taskbar accent to remove it.
 - Only the primary taskbar (`Shell_TrayWnd`) is handled; secondary-monitor
   taskbars are not.
-- `patch-main.js` expects the 0.2.1-rc.2 anchors and will fail loudly if the
-  source changed. That is intentional.
+- `patch-main.js` expects the 0.2.1-rc.2 / 0.2.2-rc.1 anchors and will fail
+  loudly if the source changed. That is intentional.
 - Logs are written to `%TEMP%\dsh-aero-native.log`.

@@ -91,27 +91,26 @@ selector-based details are intentionally best-effort.
 > Advanced and version-specific. Read [`aero/README.md`](aero/README.md)
 > before touching `resources/app.asar`.
 
-The repository does not commit the 182 MB patched asar to git. Prebuilt assets
-are attached to the [v1.0.0 release](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0),
-or you can build the patch from your own installation.
+The repository does not commit the large patched asar to git. Prebuilt assets
+are attached to the releases; use the one matching your DSH version, or build
+the patch from your own installation.
 
-### Option A: prebuilt asset (DSH 0.2.1-rc.2 only)
+### Option A: prebuilt asset
 
-- [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)
-  — 182,798,359 bytes, SHA256 `5ACA0F97BAB4560DDC6CEBCDDC0E89950931273FB9BD89F9720B2E0E039EFB5C`
-- [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)
-  — 520,410 bytes, SHA256 `7EDC71A8D602BC6CA870CD49E6A29CFBA6C9669AB726E6437F134CC7B155750E`
-- [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt)
+| DSH | Release | Assets |
+| --- | --- | --- |
+| 0.2.1-rc.2 | [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched) — 182,798,359 bytes, `5ACA0F97…`; [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js) — 520,410 bytes, `7EDC71A8…`; [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt) |
+| 0.2.2-rc.1 | [v1.1.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.1.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/app.asar.patched) — 213,206,408 bytes, `D5FF954C…`; [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/main.patched.js) — 842,214 bytes, `D2A2408A…`; [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/SHA256SUMS.txt) |
 
-The prebuilt asar bundles the upstream DSH 0.2.1-rc.2 application with the
-patch applied; `main.patched.js` is the patched upstream main-process file.
-Both contain DSH code and are **not** MIT-licensed; DSH remains under its own
-license. Only use them with a licensed DSH installation, and delete them when
-no longer needed.
+Full hashes are in each release's `SHA256SUMS.txt`. The prebuilt asars bundle
+the upstream DSH application with the patch applied; `main.patched.js` is the
+patched upstream main-process file. They contain DSH code and are **not**
+MIT-licensed; DSH remains under its own license. Only use them with a licensed
+DSH installation, and delete them when no longer needed.
 
 1. Close DSH completely.
 2. Back up `resources/app.asar`.
-3. Copy the downloaded `app.asar.patched` over `resources/app.asar`.
+3. Copy the matching downloaded `app.asar.patched` over `resources/app.asar`.
 4. Start DSH from its install directory.
 
 To undo, restore the backup asar.
@@ -132,9 +131,9 @@ To undo, restore the backup asar.
 4. Close DSH, copy `aero/app.asar.patched` over `resources/app.asar`, and
    start DSH.
 
-The patch scripts are tested with DSH 0.2.1-rc.2 and 0.2.2-rc.1; the prebuilt
-asset is for 0.2.1-rc.2 only. The patcher fails if the main-process anchors
-changed. The window uses DWM **BlurBehind** (state 3) rather than
+The patch scripts are tested with DSH 0.2.1-rc.2 and 0.2.2-rc.1; prebuilt
+assets exist for both. The patcher fails if the main-process anchors changed.
+The window uses DWM **BlurBehind** (state 3) rather than
 Acrylic because Acrylic doubled the measured drag cost; the taskbar uses
 Acrylic (state 4), re-applied every five seconds.
 

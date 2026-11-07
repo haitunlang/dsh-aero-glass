@@ -52,13 +52,16 @@ DSH 的插件市场是一个自托管的 JSON 索引（见
 
 > 高级且绑定版本。补丁会修改 `resources/app.asar`，操作前一定要备份。
 
-Release **v1.0.0** 提供了预编译资产，适合不想自己跑构建脚本的用户：
+预编译资产按 DSH 版本分开，选择匹配的版本：
 
-- [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)（182,798,359 字节，SHA256 `5ACA0F97BAB4560DDC6CEBCDDC0E89950931273FB9BD89F9720B2E0E039EFB5C`）
-- [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)（520,410 字节，SHA256 `7EDC71A8D602BC6CA870CD49E6A29CFBA6C9669AB726E6437F134CC7B155750E`）
-- [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt)
+| DSH | Release | 资产 |
+| --- | --- | --- |
+| 0.2.1-rc.2 | [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)（182,798,359 字节，`5ACA0F97…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)（520,410 字节，`7EDC71A8…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt) |
+| 0.2.2-rc.1 | [v1.1.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.1.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/app.asar.patched)（213,206,408 字节，`D5FF954C…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/main.patched.js)（842,214 字节，`D2A2408A…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/SHA256SUMS.txt) |
 
-**只适用于 DSH Desktop 0.2.1-rc.2 / Electron 44.7.0 / Windows 10。** DSH 0.2.2-rc.1 请按下面的“自行构建”重新生成，`aero/` 脚本已在 0.2.2 上验证锚点匹配；预编译资产仍只对应 0.2.1。
+完整哈希见每个 Release 的 `SHA256SUMS.txt`。
+
+**只适用于 Windows 10。** v1.0.0 对应 DSH 0.2.1-rc.2，v1.1.0 对应 0.2.2-rc.1；其他版本请按下面的“自行构建”重新生成，`aero/` 脚本已在 0.2.1/0.2.2 上验证锚点匹配。
 
 ### 安装
 
@@ -85,7 +88,7 @@ node repack.js
 
 ### 资产说明
 
-预编译 `app.asar.patched` 是**上游 DSH 0.2.1-rc.2 应用 + 本补丁**的便捷打包，`main.patched.js` 是补丁后的上游主进程文件，两者都包含 DSH 自身的代码；它们**不属于 MIT 许可**，DSH 代码仍归其权利人所有。请仅在已经合法使用 DSH 的环境中使用，并按需删除。仓库里的 MIT 许可只覆盖本项目原创的插件、脚本和文档。
+预编译 `app.asar.patched` 是**上游 DSH 0.2.1/0.2.2 应用 + 本补丁**的便捷打包，`main.patched.js` 是补丁后的上游主进程文件，两者都包含 DSH 自身的代码；它们**不属于 MIT 许可**，DSH 代码仍归其权利人所有。请仅在已经合法使用 DSH 的环境中使用，并按需删除。仓库里的 MIT 许可只覆盖本项目原创的插件、脚本和文档。
 
 ---
 
@@ -106,7 +109,7 @@ node repack.js
 ## 注意与限制
 
 - **原生补丁只支持 Windows 10**；Windows 11 使用不同的材质 API，未验证。
-- 预编译 asar 只对应 DSH 0.2.1-rc.2；DSH 更新会覆盖 `app.asar`，补丁失效。
+- 预编译 asar 按 DSH 版本分开（v1.0.0 = 0.2.1，v1.1.0 = 0.2.2）；DSH 更新会覆盖 `app.asar`，补丁失效。
 - 任务栏材质是系统级效果，DSH 运行期间每 5 秒重新应用；关闭 DSH 后可能保留到 Explorer 重启。
 - 只处理主任务栏 `Shell_TrayWnd`，多显示器副任务栏未处理。
 - 页面皮肤的类名选择器是“尽力而为”，DSH 大版本更新后建议重新核对。
