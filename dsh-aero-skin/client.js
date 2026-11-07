@@ -346,26 +346,26 @@ html[data-aero] #root div:has(> [data-shell-overlay]) > div:nth-child(2) {
 
 /* Keep the conversation header flat: no gradient, no seam line; the header
    and transcript share the same glass and the buttons stay embedded. */
-html[data-aero] [class*="Dc7zOa_header"] {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) {
   border-bottom-color: transparent !important;
   background-color: transparent;
   background-image: none;
 }
 
-html[data-aero] [class*="Dc7zOa_header"] :is(button, [role="button"], [role="combobox"], [role="tab"]) {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) :is(button, [role="button"], [role="combobox"], [role="tab"]) {
   background-color: transparent !important;
   background-image: none !important;
   border-color: transparent !important;
   box-shadow: none !important;
 }
 
-html[data-aero] [class*="Dc7zOa_header"] :is(button, [role="button"]):hover:not(:disabled) {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) :is(button, [role="button"]):hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.10) !important;
 }
 
 /* The creation-mode / preset chip is not a plain button in every build; strip
    its pill fill and outline so it sits directly on the header glass. */
-html[data-aero] [class*="Dc7zOa_header"] :is([class*="chip"], [class*="badge"], [class*="preset"], [class*="modeChip"], [class*="creation"]) {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) :is([class*="chip"], [class*="badge"], [class*="preset"], [class*="modeChip"], [class*="creation"]) {
   background-color: transparent !important;
   background-image: none !important;
   border-color: transparent !important;
@@ -373,28 +373,28 @@ html[data-aero] [class*="Dc7zOa_header"] :is([class*="chip"], [class*="badge"], 
 }
 
 /* This build's creation-mode trigger is a div with a 40% white fill. */
-html[data-aero] [class*="Dc7zOa_header"] [class*="b06ba0_trigger"] {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) :is([class*="A6Bq1a_trigger"], [class*="b06ba0_trigger"]) {
   background-color: transparent !important;
   background-image: none !important;
   border-color: transparent !important;
   box-shadow: none !important;
 }
 
-html[data-aero] [class*="Dc7zOa_header"] [class*="b06ba0_trigger"]:hover {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) :is([class*="A6Bq1a_trigger"], [class*="b06ba0_trigger"]):hover {
   background-color: rgba(255, 255, 255, 0.10) !important;
 }
 
 /* The File Explorer app icon carries a baked-in white tile; replace the glyph
    with a currentColor folder outline so only the glass shows behind it. */
-html[data-aero] [class*="Dc7zOa_header"] button:has(svg[class*="appIcon"]) svg[class*="appIcon"] {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) button:has(svg[class*="appIcon"]) svg[class*="appIcon"] {
   display: none !important;
 }
 
-html[data-aero] [class*="Dc7zOa_header"] button:has(svg[class*="appIcon"]) > div:has(svg[class*="appIcon"]) {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) button:has(svg[class*="appIcon"]) > div:has(svg[class*="appIcon"]) {
   display: none !important;
 }
 
-html[data-aero] [class*="Dc7zOa_header"] button:has(svg[class*="appIcon"])::before {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) button:has(svg[class*="appIcon"])::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -405,12 +405,12 @@ html[data-aero] [class*="Dc7zOa_header"] button:has(svg[class*="appIcon"])::befo
 }
 
 /* The same button uses an <img> app icon in this build. */
-html[data-aero] [class*="Dc7zOa_header"] button:has(img[class*="appIcon"]) img[class*="appIcon"],
-html[data-aero] [class*="Dc7zOa_header"] button:has(img[class*="appIcon"]) > div:has(img[class*="appIcon"]) {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) button:has(img[class*="appIcon"]) img[class*="appIcon"],
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) button:has(img[class*="appIcon"]) > div:has(img[class*="appIcon"]) {
   display: none !important;
 }
 
-html[data-aero] [class*="Dc7zOa_header"] button:has(img[class*="appIcon"])::before {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) button:has(img[class*="appIcon"])::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -422,7 +422,7 @@ html[data-aero] [class*="Dc7zOa_header"] button:has(img[class*="appIcon"])::befo
 
 /* Icon buttons can bring their own wrapper tiles/frames; flatten every
    descendant fill in the utilities row so only the glyphs remain. */
-html[data-aero] [class*="Dc7zOa_header"] :is([class*="headerUtilities"], [class*="headerCorner"]) * {
+html[data-aero] :is([class*="an3WzG_header"], [class*="Dc7zOa_header"]) :is([class*="headerUtilities"], [class*="headerCorner"]) * {
   background-color: transparent !important;
   background-image: none !important;
   border-color: transparent !important;

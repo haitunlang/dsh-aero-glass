@@ -6,7 +6,8 @@ A Windows 7 Aero-inspired glass skin for the **DSH Desktop** Web UI, plus an
 optional Windows 10 native blur patch that makes the window show the real
 desktop behind it.
 
-The project has two independent halves:
+The project has two independent halves. The page skin is tested with DSH
+**0.2.1-rc.2** and **0.2.2-rc.1**.
 
 | Part | What it does | Install |
 | --- | --- | --- |
@@ -77,10 +78,11 @@ General. Both share the `dsh-aero:enabled` localStorage key.
   sidebar/header junction;
 - the settings switch and titlebar pill control the whole skin.
 
-The page skin uses class-name anchors from the current DSH build
-(`Dc7zOa_header`, `b06ba0_trigger`, `appIcon`, …). A DSH update can change
-those names; the skin then falls back to defaults instead of breaking the app.
-The selector-based details are intentionally best-effort.
+The page skin keeps class-name anchors for both DSH 0.2.1 (`Dc7zOa_header`,
+`b06ba0_trigger`) and 0.2.2 (`an3WzG_header`, `A6Bq1a_trigger`); the folder
+button is matched by its `appIcon` class. A future DSH update can change those
+names; the skin then falls back to defaults instead of breaking the app. The
+selector-based details are intentionally best-effort.
 
 ---
 
@@ -130,8 +132,9 @@ To undo, restore the backup asar.
 4. Close DSH, copy `aero/app.asar.patched` over `resources/app.asar`, and
    start DSH.
 
-The patch is written for DSH 0.2.1-rc.2 and will fail if the main-process
-anchors changed. The window uses DWM **BlurBehind** (state 3) rather than
+The patch scripts are tested with DSH 0.2.1-rc.2 and 0.2.2-rc.1; the prebuilt
+asset is for 0.2.1-rc.2 only. The patcher fails if the main-process anchors
+changed. The window uses DWM **BlurBehind** (state 3) rather than
 Acrylic because Acrylic doubled the measured drag cost; the taskbar uses
 Acrylic (state 4), re-applied every five seconds.
 
