@@ -12,8 +12,8 @@
         "zh": "Aero 玻璃皮肤"
       },
       "description": {
-        "en": "Windows 7 Aero-inspired glass skin for the DSH Web UI (DSH 0.2.1/0.2.2).",
-        "zh": "为 DSH Web UI 提供 Windows 7 Aero 风格玻璃皮肤（支持 DSH 0.2.1/0.2.2）。"
+        "en": "Windows 7 Aero-inspired glass skin for the DSH Web UI (DSH 0.2.1 / 0.2.2).",
+        "zh": "为 DSH Web UI 提供 Windows 7 Aero 风格玻璃皮肤（支持 DSH 0.2.1 / 0.2.2）。"
       },
       "icon": "icons/dsh-aero-skin.svg",
       "author": "haitunlang",
@@ -23,6 +23,16 @@
         "directory": "dsh-aero-skin"
       },
       "versions": [
+        {
+          "version": "1.2.0",
+          "publishTimestamp": 1794754016,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/haitunlang/dsh-aero-glass",
+            "commit": "96c8a878d0e44795dfa265b0829f06f3e8b30f69",
+            "path": "dsh-aero-skin"
+          }
+        },
         {
           "version": "1.1.0",
           "publishTimestamp": 1794049924,
