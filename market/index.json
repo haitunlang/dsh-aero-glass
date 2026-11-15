@@ -29,7 +29,7 @@
           "source": {
             "type": "git",
             "url": "https://github.com/haitunlang/dsh-aero-glass",
-            "commit": "96c8a878d0e44795dfa265b0829f06f3e8b30f69",
+            "commit": "a265706fc3ce7edcda928aaf8370033d74e47082",
             "path": "dsh-aero-skin"
           }
         },
