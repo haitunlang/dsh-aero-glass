@@ -4,7 +4,7 @@
 
 给 **DSH Desktop** 的 Web UI 加上 Windows 7 Aero 风格的毛玻璃皮肤，并附带一个可选的 Windows 10 原生模糊补丁，让窗口真正透出后面的桌面和其他窗口。
 
-项目分两部分，可以单独使用。页面皮肤已在 DSH **0.2.1-rc.2** 和 **0.2.2-rc.1** 上验证。
+项目分两部分，可以单独使用。页面皮肤已在 DSH **0.2.1-rc.2**、**0.2.2-rc.1** 和 **0.2.2-rc.3** 上验证。
 
 | 部分 | 作用 | 安装方式 |
 | --- | --- | --- |
@@ -32,7 +32,7 @@
    https://cdn.jsdelivr.net/gh/haitunlang/dsh-aero-glass@main/market/index.json
    ```
 
-3. 找到 **Aero Glass Skin**，安装 v1.1.0。
+3. 找到 **Aero Glass Skin**，安装 v1.2.0。
 
 DSH 的插件市场是一个自托管的 JSON 索引（见
 [官方说明](https://deepseek-harness.github.io/deepseek-harness/guide/plugin-market)）。
@@ -102,7 +102,13 @@ node repack.js
 - 内容列左上角圆角归零，消除侧栏/头部交界处的缺口；
 - 标题栏 Aero 胶囊和设置开关控制整套皮肤。
 
-页面皮肤同时保留 DSH 0.2.1（`Dc7zOa_header`、`b06ba0_trigger`）和 0.2.2（`an3WzG_header`、`A6Bq1a_trigger`）的类名锚点；文件夹按钮按 `appIcon` 类匹配。以后 DSH 再改类名时，细节会退回默认样式，不会导致应用崩溃。
+页面皮肤优先使用稳定的 DOM 锚点，而不是 hash 类名：
+
+- `header[data-window-drag]`：对话头部；
+- `[data-conversation-header-corner]`：右上工具区；
+- `appIcon`：打开方式按钮。
+
+hash 类名（0.2.2 的 `an3WzG_*`、`A6Bq1a_trigger`；0.2.1 的 `Dc7zOa_header`、`b06ba0_trigger`）仍作为回退保留。以后 DSH 再改类名时，细节会退回默认样式，不会导致应用崩溃。
 
 ---
 

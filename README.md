@@ -7,7 +7,7 @@ optional Windows 10 native blur patch that makes the window show the real
 desktop behind it.
 
 The project has two independent halves. The page skin is tested with DSH
-**0.2.1-rc.2** and **0.2.2-rc.1**.
+**0.2.1-rc.2**, **0.2.2-rc.1** and **0.2.2-rc.3**.
 
 | Part | What it does | Install |
 | --- | --- | --- |
@@ -78,11 +78,16 @@ General. Both share the `dsh-aero:enabled` localStorage key.
   sidebar/header junction;
 - the settings switch and titlebar pill control the whole skin.
 
-The page skin keeps class-name anchors for both DSH 0.2.1 (`Dc7zOa_header`,
-`b06ba0_trigger`) and 0.2.2 (`an3WzG_header`, `A6Bq1a_trigger`); the folder
-button is matched by its `appIcon` class. A future DSH update can change those
-names; the skin then falls back to defaults instead of breaking the app. The
-selector-based details are intentionally best-effort.
+The page skin prefers stable DOM anchors over hashed class names:
+
+- `header[data-window-drag]` for the conversation header;
+- `[data-conversation-header-corner]` for the utilities corner;
+- `appIcon` for the open-in-app button.
+
+The hashed class names (`an3WzG_*`, `A6Bq1a_trigger` on 0.2.2;
+`Dc7zOa_header`, `b06ba0_trigger` on 0.2.1) remain as fallbacks. A future DSH
+update can still change them; the skin then falls back to defaults instead of
+breaking the app. The selector-based details are intentionally best-effort.
 
 ---
 
