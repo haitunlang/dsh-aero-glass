@@ -106,6 +106,7 @@ the patch from your own installation.
 | --- | --- | --- |
 | 0.2.1-rc.2 | [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched) — 182,798,359 bytes, `5ACA0F97…`; [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js) — 520,410 bytes, `7EDC71A8…`; [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt) |
 | 0.2.2-rc.1 | [v1.1.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.1.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/app.asar.patched) — 213,206,408 bytes, `D5FF954C…`; [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/main.patched.js) — 842,214 bytes, `D2A2408A…`; [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/SHA256SUMS.txt) |
+| 0.2.2-rc.3 | [v1.2.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.2.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/app.asar.patched) — 209,025,379 bytes, `2B9AFB1F…`; [main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/main.patched.js) — 852,139 bytes, `44408742…`; [SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/SHA256SUMS.txt) |
 
 Full hashes are in each release's `SHA256SUMS.txt`. The prebuilt asars bundle
 the upstream DSH application with the patch applied; `main.patched.js` is the
@@ -136,7 +137,7 @@ To undo, restore the backup asar.
 4. Close DSH, copy `aero/app.asar.patched` over `resources/app.asar`, and
    start DSH.
 
-The patch scripts are tested with DSH 0.2.1-rc.2 and 0.2.2-rc.1; prebuilt
+The patch scripts are tested with DSH 0.2.1-rc.2, 0.2.2-rc.1 and 0.2.2-rc.3; prebuilt
 assets exist for both. The patcher fails if the main-process anchors changed.
 The window uses DWM **BlurBehind** (state 3) rather than
 Acrylic because Acrylic doubled the measured drag cost; the taskbar uses

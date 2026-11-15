@@ -58,10 +58,11 @@ DSH 的插件市场是一个自托管的 JSON 索引（见
 | --- | --- | --- |
 | 0.2.1-rc.2 | [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)（182,798,359 字节，`5ACA0F97…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)（520,410 字节，`7EDC71A8…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt) |
 | 0.2.2-rc.1 | [v1.1.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.1.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/app.asar.patched)（213,206,408 字节，`D5FF954C…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/main.patched.js)（842,214 字节，`D2A2408A…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/SHA256SUMS.txt) |
+| 0.2.2-rc.3 | [v1.2.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.2.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/app.asar.patched)（209,025,379 字节，`2B9AFB1F…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/main.patched.js)（852,139 字节，`44408742…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/SHA256SUMS.txt) |
 
 完整哈希见每个 Release 的 `SHA256SUMS.txt`。
 
-**只适用于 Windows 10。** v1.0.0 对应 DSH 0.2.1-rc.2，v1.1.0 对应 0.2.2-rc.1；其他版本请按下面的“自行构建”重新生成，`aero/` 脚本已在 0.2.1/0.2.2 上验证锚点匹配。
+**只适用于 Windows 10。** v1.0.0 对应 DSH 0.2.1-rc.2，v1.1.0 对应 0.2.2-rc.1，v1.2.0 对应 0.2.2-rc.3；其他版本请按下面的“自行构建”重新生成，`aero/` 脚本已在 0.2.1/0.2.2 上验证锚点匹配。
 
 ### 安装
 
@@ -115,7 +116,7 @@ hash 类名（0.2.2 的 `an3WzG_*`、`A6Bq1a_trigger`；0.2.1 的 `Dc7zOa_header
 ## 注意与限制
 
 - **原生补丁只支持 Windows 10**；Windows 11 使用不同的材质 API，未验证。
-- 预编译 asar 按 DSH 版本分开（v1.0.0 = 0.2.1，v1.1.0 = 0.2.2）；DSH 更新会覆盖 `app.asar`，补丁失效。
+- 预编译 asar 按 DSH 版本分开（v1.0.0 = 0.2.1，v1.1.0 = 0.2.2-rc.1，v1.2.0 = 0.2.2-rc.3）；DSH 更新会覆盖 `app.asar`，补丁失效。
 - 任务栏材质是系统级效果，DSH 运行期间每 5 秒重新应用；关闭 DSH 后可能保留到 Explorer 重启。
 - 只处理主任务栏 `Shell_TrayWnd`，多显示器副任务栏未处理。
 - 页面皮肤的类名选择器是“尽力而为”，DSH 大版本更新后建议重新核对。

@@ -16,6 +16,7 @@
 | --- | --- | --- |
 | 0.2.1-rc.2 | [v1.0.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.0.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/app.asar.patched)（182,798,359 字节，`5ACA0F97…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/main.patched.js)（520,410 字节，`7EDC71A8…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.0.0/SHA256SUMS.txt) |
 | 0.2.2-rc.1 | [v1.1.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.1.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/app.asar.patched)（213,206,408 字节，`D5FF954C…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/main.patched.js)（842,214 字节，`D2A2408A…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.1.0/SHA256SUMS.txt) |
+| 0.2.2-rc.3 | [v1.2.0](https://github.com/haitunlang/dsh-aero-glass/releases/tag/v1.2.0) | [app.asar.patched](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/app.asar.patched)（209,025,379 字节，`2B9AFB1F…`）；[main.patched.js](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/main.patched.js)（852,139 字节，`44408742…`）；[SHA256SUMS.txt](https://github.com/haitunlang/dsh-aero-glass/releases/download/v1.2.0/SHA256SUMS.txt) |
 
 完整哈希见每个 Release 的 `SHA256SUMS.txt`。
 
@@ -26,7 +27,7 @@
 ## 环境要求
 
 - Windows 10（在 22H2 / build 19045 验证）
-- DSH Desktop **0.2.1-rc.2** 或 **0.2.2-rc.1** / Electron 44.7.0
+- DSH Desktop **0.2.1-rc.2**、**0.2.2-rc.1** 或 **0.2.2-rc.3** / Electron 44.7.0
 - PATH 中有 Node.js
 - `resources/app.asar` 的 asar 完整性 fuse 已关闭
   （`EnableEmbeddedAsarIntegrityValidation: Disabled`），否则重建的包会被拒绝
@@ -97,6 +98,6 @@ Acrylic 每帧重算噪声/模糊，是拖动不跟手的根因；BlurBehind 视
 - DSH 自动更新会覆盖 `app.asar`；更新后需要按新版本重新生成补丁。
 - 任务栏是系统级效果，DSH 运行期间每 5 秒重新应用；关闭 DSH 后可能保留到 Explorer 重启。
 - 只处理主任务栏 `Shell_TrayWnd`，多显示器副任务栏未处理。
-- `patch-main.js` 依赖 0.2.1-rc.2 / 0.2.2-rc.1 的锚点，源码变化会直接报错；这是有意保护。
+- `patch-main.js` 依赖 0.2.1-rc.2 / 0.2.2-rc.1 / 0.2.2-rc.3 的锚点，源码变化会直接报错；这是有意保护。
 - 日志写入 `%TEMP%\dsh-aero-native.log`。
 - 预编译 asar 含上游 DSH 代码，不属于 MIT；仓库的 MIT 许可只覆盖原创脚本和文档。
